@@ -11,7 +11,7 @@ from requests_html import HTMLSession
 
 # Generating a .pyi file wasn't enough. Mypy still complains this lacking a
 # stub. So ignore.
-from etc.constants import (  # type: ignore
+from .etc.constants import (  # type: ignore
     VAR_DIR,
     WIKI_TABLE_CLASS,
     WIKI_DOMAIN,
@@ -24,7 +24,7 @@ TextRow = List[str]
 
 def as_text(elements) -> TextRow:
     """
-    Exract text from a list of HTML elements.
+    Convert HTML elements to plain text.
     """
     return [el.text for el in elements]
 
