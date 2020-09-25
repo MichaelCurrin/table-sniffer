@@ -27,9 +27,9 @@ Wrote CSV:
 
 Open your CSVs.
 
-Sample output CSV:
+See sample output CSV stored in the project:
 
-- [wiki-python](/table_sniffer/var/sample/wiki-python.csv)
+- [wiki-python.csv](/table_sniffer/var/sample/wiki-python.csv)
 
 
 ## Documentation
