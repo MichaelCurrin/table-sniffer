@@ -48,5 +48,7 @@ check-types:
 unit:
 	pytest
 
+run:
+	cd table_sniffer && ./table_sniffer.py
 
 pre-deploy: install install-dev format-check lint check-types unit
