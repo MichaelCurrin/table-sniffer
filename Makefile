@@ -26,6 +26,7 @@ format-check:
 pylint:
 	# Exit on error code if needed.
 	pylint table_sniffer || pylint-exit $$?
+
 # Lint with flake8.
 flake8:
 	# Stop the build if there are Python syntax errors or undefined names.
