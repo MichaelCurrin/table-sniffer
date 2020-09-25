@@ -7,7 +7,10 @@
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/table-sniffer.svg)](https://GitHub.com/MichaelCurrin/table-sniffer/tags/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](#license)
 
-Table Sniffer is a light-weight Python 3 tool to help you gather data for your research or data science projects. Point to a page of HTML tables and get CSVs out.
+
+## Documentation
+
+See project [docs](/docs/).
 
 
 ## License
