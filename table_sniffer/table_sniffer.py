@@ -11,12 +11,12 @@ from requests_html import HTMLSession
 
 # Generating a .pyi file wasn't enough. Mypy still complains this lacking a
 # stub. So ignore.
-from etc.constants import (
+from etc.constants import (  # type: ignore
     VAR_DIR,
     WIKI_TABLE_CLASS,
     WIKI_DOMAIN,
     DEFAULT_URL,
-)  # type: ignore
+)
 
 
 TextRow = List[str]
