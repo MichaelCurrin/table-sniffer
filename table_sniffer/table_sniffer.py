@@ -9,13 +9,8 @@ from pathlib import Path
 
 from requests_html import HTMLSession
 
+from etc.constants import VAR_DIR, WIKI_TABLE_CLASS, WIKI_DOMAIN, DEFAULT_URL
 
-APP_DIR = Path(__file__).resolve().parent
-VAR_DIR = APP_DIR / "var"
-WIKI_TABLE_CLASS = "wikitable"
-
-WIKI_DOMAIN = "wikipedia.org"
-DEFAULT_URL = "https://en.wikipedia.org/wiki/Python_(programming_language)"
 
 TextRow = List[str]
 
