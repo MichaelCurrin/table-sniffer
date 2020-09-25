@@ -14,6 +14,7 @@ APP_DIR = Path(__file__).resolve().parent
 VAR_DIR = APP_DIR / "var"
 WIKI_TABLE_CLASS = "wikitable"
 
+WIKI_DOMAIN = "wikipedia.org"
 DEFAULT_URL = "https://en.wikipedia.org/wiki/Python_(programming_language)"
 
 
@@ -49,7 +50,8 @@ def process(url):
     r = session.get(url)
 
     selector = "body table"
-    selector = f"{selector}.{WIKI_TABLE_CLASS}"
+    if WIKI_DOMAIN in url:
+        selector = f"{selector}.{WIKI_TABLE_CLASS}"
 
     tables = r.html.find(selector)
 
