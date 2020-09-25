@@ -9,6 +9,8 @@ from pathlib import Path
 
 from requests_html import HTMLSession
 
+# Dot is needed to make test pass, but it breaks when running script directly
+# and not with `-m`.
 # Generating a .pyi file wasn't enough. Mypy still complains this lacking a
 # stub. So ignore.
 from .etc.constants import (  # type: ignore
