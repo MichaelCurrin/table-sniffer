@@ -8,6 +8,30 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](#license)
 
 
+## Sample usage
+
+There are many `table` elements on this page and one has the class `wikitable`, which is of interest.
+
+- [en.wikipedia.org/wiki/Python_(programming_language))](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+Run the script against a URL. Make sure to quote your URL to escape characters.
+
+```sh
+$ python -m table_sniffer.table_sniffer \
+    'https://en.wikipedia.org/wiki/Python_(programming_language)'
+Wrote CSV:
+ - .../var/1.csv
+ - 16 data rows
+
+```
+
+Open your CSVs.
+
+Sample output CSV:
+
+- [wiki-python](/table_sniffer/var/sample/wiki-python.csv)
+
+
 ## Documentation
 
 See project [docs](/docs/).
