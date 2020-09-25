@@ -1,26 +1,23 @@
 # Usage
 
 
-```bash
+```sh
 $ cd <PATH_TO_REPO>
 $ source venv/bin/activate
 ```
 
-_TODO: Replace directory._
+## Run against default URL
 
-```
-$ cd table_sniffer
-```
-
-_TODO: Add to this section with commands based on specifics of your project._
-
-```bash
-$ python foo.py --bar
-Foo
-bar!
-baz?
+```sh
+$ make run
 ```
 
-```bash
-$ ./foo/bar.py --help
+## Run against custom URL
+
+```sh
+$ python -m table_sniffer.table_sniffer \
+    'https://en.wikipedia.org/wiki/Python_(programming_language)'
+Wrote CSV:
+ - .../var/1.csv
+ - 16 data rows
 ```
