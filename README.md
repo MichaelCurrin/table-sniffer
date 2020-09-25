@@ -12,7 +12,7 @@
 
 There are many `table` elements on this page and one has the class `wikitable`, which is of interest.
 
-- [en.wikipedia.org/wiki/Python_(programming_language))](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [en.wikipedia.org/wiki/Python_(programming_language)](https://en.wikipedia.org/wiki/Python_(programming_language))
 
 Run the script against a URL. Make sure to quote your URL to escape characters.
 
