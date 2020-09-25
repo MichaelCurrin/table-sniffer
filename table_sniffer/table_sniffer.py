@@ -4,7 +4,7 @@ Main application file.
 """
 import csv
 import sys
-from typing import List
+from typing import List, Tuple
 from pathlib import Path
 
 from requests_html import HTMLSession
@@ -17,15 +17,17 @@ WIKI_TABLE_CLASS = "wikitable"
 WIKI_DOMAIN = "wikipedia.org"
 DEFAULT_URL = "https://en.wikipedia.org/wiki/Python_(programming_language)"
 
+TextRow = List[str]
 
-def as_text(elements) -> List[str]:
+
+def as_text(elements) -> TextRow:
     """
     Exract text from a list of HTML elements.
     """
     return [el.text for el in elements]
 
 
-def write_csv(path: Path, fieldnames: list, rows: List[list]) -> None:
+def write_csv(path: Path, fieldnames: TextRow, rows: List[TextRow]) -> None:
     """
     Write a CSV file.
     """
@@ -45,7 +47,10 @@ def write_csv(path: Path, fieldnames: list, rows: List[list]) -> None:
     print()
 
 
-def table_to_csv(table, title: str) -> None:
+def extract_table(table) -> Tuple[TextRow, List[TextRow]]:
+    """
+    Get values out of an HTML table.
+    """
     html_rows = table.find("tr")
 
     header = html_rows.pop(0)
@@ -53,11 +58,13 @@ def table_to_csv(table, title: str) -> None:
 
     rows = [as_text(row.find("td")) for row in html_rows]
 
-    out_path = VAR_DIR / f"{title}.csv"
-    write_csv(out_path, fieldnames, rows)
+    return fieldnames, rows
 
 
-def process(url):
+def process(url: str) -> None:
+    """
+    Extract tables on a given URL and write out as CSVs.
+    """
     session = HTMLSession()
     r = session.get(url)
 
@@ -68,10 +75,14 @@ def process(url):
     tables = r.html.find(selector)
 
     for i, table in enumerate(tables):
-        table_to_csv(table, str(i + 1))
+        fieldnames, rows = extract_table(table)
+
+        title = str(i + 1)
+        out_path = VAR_DIR / f"{title}.csv"
+        write_csv(out_path, fieldnames, rows)
 
 
-def main(args: List[str]):
+def main(args: List[str]) -> None:
     """
     Main command-line function.
     """
