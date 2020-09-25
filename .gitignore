@@ -4,4 +4,4 @@ __pycache__/
 
 venv
 
-pyproject/var/*.csv
+table_sniffer/var/*.csv
