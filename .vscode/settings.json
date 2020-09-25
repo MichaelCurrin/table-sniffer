@@ -1,7 +1,6 @@
 {
-    "_NOTE": "Replace pyproject with your package folder name",
-    "terminal.integrated.cwd": "pyproject",
-    "code-runner.cwd": "pyproject",
+    "terminal.integrated.cwd": "table_sniffer",
+    "code-runner.cwd": "table_sniffer",
 
     "python.pythonPath": "venv/bin/python",
 
