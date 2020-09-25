@@ -8,6 +8,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](#license)
 
 
+This simple Python finds HTML tables on a given webpage and saves each as CSV files. It only cares about data as plain text, as it strips out HTML styling, links etc.
+
+
 ## Sample usage
 
 Find a URL which has tables you want to scrape.
