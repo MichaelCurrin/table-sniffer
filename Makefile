@@ -52,4 +52,4 @@ run:
 	# cd table_sniffer && ./table_sniffer.py
 	python -m table_sniffer.table_sniffer
 
-pre-deploy: install install-dev format-check lint check-types unit
+pre-deploy: format-check lint check-types unit
