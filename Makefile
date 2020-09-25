@@ -1,5 +1,6 @@
 default: install install-dev
 
+
 # Show summary of make commands.
 help:
 	@echo 'Print lines that are not indented (targets and comments) or empty, plus any indented echo lines.'
@@ -47,5 +48,5 @@ check-types:
 unit:
 	pytest
 
-# TODO: Add integration tests etc here or remove this target.
-test: unit
+
+pre-deploy: install install-dev format-check lint check-types unit
