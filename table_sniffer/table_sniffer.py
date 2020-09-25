@@ -45,6 +45,18 @@ def write_csv(path: Path, fieldnames: list, rows: List[list]) -> None:
     print()
 
 
+def table_to_csv(table, title: str) -> None:
+    html_rows = table.find("tr")
+
+    header = html_rows.pop(0)
+    fieldnames = as_text(header.find("th"))
+
+    rows = [as_text(row.find("td")) for row in html_rows]
+
+    out_path = VAR_DIR / f"{title}.csv"
+    write_csv(out_path, fieldnames, rows)
+
+
 def process(url):
     session = HTMLSession()
     r = session.get(url)
@@ -55,16 +67,8 @@ def process(url):
 
     tables = r.html.find(selector)
 
-    for i, t in enumerate(tables):
-        html_rows = t.find("tr")
-
-        header = html_rows.pop(0)
-        fieldnames = as_text(header.find("th"))
-
-        rows = [as_text(row.find("td")) for row in html_rows]
-
-        out_path = VAR_DIR / f"{i+1}.csv"
-        write_csv(out_path, fieldnames, rows)
+    for i, table in enumerate(tables):
+        table_to_csv(table, str(i + 1))
 
 
 def main(args: List[str]):
