@@ -44,15 +44,7 @@ def write_csv(path: Path, fieldnames: list, rows: List[list]) -> None:
     print()
 
 
-def main(args: List[str]):
-    """
-    Main command-line function.
-    """
-    if args:
-        url = args[0]
-    else:
-        url = DEFAULT_URL
-
+def process(url):
     session = HTMLSession()
     r = session.get(url)
 
@@ -71,6 +63,18 @@ def main(args: List[str]):
 
         out_path = VAR_DIR / f"{i+1}.csv"
         write_csv(out_path, fieldnames, rows)
+
+
+def main(args: List[str]):
+    """
+    Main command-line function.
+    """
+    if args:
+        url = args[0]
+    else:
+        url = DEFAULT_URL
+
+    process(url)
 
 
 if __name__ == "__main__":
