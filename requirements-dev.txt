@@ -4,4 +4,6 @@ flake8
 pylint
 pylint-exit
 
+mypy
+
 pytest
