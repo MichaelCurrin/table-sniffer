@@ -61,7 +61,7 @@ def extract_table(table) -> Tuple[TextRow, List[TextRow]]:
     return fieldnames, rows
 
 
-def process(url: str) -> None:
+def extract_tables_from_page(url: str) -> None:
     """
     Extract tables on a given URL and write out as CSVs.
     """
@@ -91,7 +91,7 @@ def main(args: List[str]) -> None:
     else:
         url = DEFAULT_URL
 
-    process(url)
+    extract_tables_from_page(url)
 
 
 if __name__ == "__main__":
