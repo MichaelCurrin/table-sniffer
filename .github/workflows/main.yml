@@ -24,5 +24,8 @@ jobs:
       - name: Lint
         run: make lint
 
+      - name: Check types
+        run: make check-types
+
       - name: Unit tests
         run: make unit
