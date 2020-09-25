@@ -1,4 +1,4 @@
-# Table Sniffer 🕸 🐶 🐽 🗄
+# Table Sniffer 🕵️ 🕸 🐶 🐽 🗄
 > HTML table scraping for CSV lovers
 
 <!-- Shields from https://shields.io/ -->
