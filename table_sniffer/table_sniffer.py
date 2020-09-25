@@ -17,7 +17,10 @@ WIKI_TABLE_CLASS = "wikitable"
 DEFAULT_URL = "https://en.wikipedia.org/wiki/Python_(programming_language)"
 
 
-def as_text(elements):
+def as_text(elements) -> List[str]:
+    """
+    Exract text from a list of HTML elements.
+    """
     return [el.text for el in elements]
 
 
