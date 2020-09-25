@@ -25,7 +25,7 @@ format-check:
 # Lint with PyLint.
 pylint:
 	# Exit on error code if needed.
-	pylint pyproject || pylint-exit $?
+	pylint table_sniffer || pylint-exit $?
 # Lint with flake8.
 flake8:
 	# Stop the build if there are Python syntax errors or undefined names.
@@ -39,7 +39,7 @@ lint: pylint flake8
 fix: format lint
 
 check-types:
-	mypy pyproject tests
+	mypy table_sniffer tests
 
 
 # Tests.
