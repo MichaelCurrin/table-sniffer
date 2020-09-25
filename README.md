@@ -10,11 +10,13 @@
 
 ## Sample usage
 
-There are many `table` elements on this page and one has the class `wikitable`, which is of interest.
+Find a URL which has tables you want to scrape.
 
 - [en.wikipedia.org/wiki/Python_(programming_language)](https://en.wikipedia.org/wiki/Python_(programming_language))
 
-Run the script against a URL. Make sure to quote your URL to escape characters.
+It actually has many `table` elements but only one is of interest and has `wikitable` on the class. So Table Sniffer will see the domain is Wikipedia and filter to only those tables.
+
+Then run the script against a URL. Make sure to quote your URL to escape characters.
 
 ```sh
 $ python -m table_sniffer.table_sniffer \
@@ -25,9 +27,9 @@ Wrote CSV:
 
 ```
 
-Open your CSVs.
+Open your CSVs stored in the `var` directory.
 
-See sample output CSV stored in the project:
+See a sample output CSV stored in the project:
 
 - [wiki-python.csv](/table_sniffer/var/sample/wiki-python.csv)
 
