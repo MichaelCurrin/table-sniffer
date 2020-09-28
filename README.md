@@ -19,7 +19,7 @@ Run the tool.
 $ python -m table_sniffer.table_sniffer 'https://example.com'
 ```
 
-Get CSVs written out to the project's `var` directory.
+If tables could be found on the page, you'll see log output telling you about the CSVs written out to the project's `var` directory.
 
 
 ## Documentation
