@@ -13,18 +13,18 @@ This simple Python finds HTML tables on a given webpage and saves each as CSV fi
 
 ## Sample usage
 
-Run the tool.
+Run the tool against a URL.
 
 ```sh
 $ python -m table_sniffer.table_sniffer 'https://example.com'
 ```
 
-If tables could be found on the page, you'll see log output telling you about the CSVs written out to the project's `var` directory.
+If any HTML `table` elements could be found on the page, you'll see log output telling you about the CSVs written out to the project's `var` directory.
 
 
 ## Documentation
 
-See the project [docs](/docs/).
+Read more in the [docs](/docs/).
 
 
 ## License
