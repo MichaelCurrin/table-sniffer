@@ -13,37 +13,18 @@ This simple Python finds HTML tables on a given webpage and saves each as CSV fi
 
 ## Sample usage
 
-Find a URL which has tables you want to scrape.
-
-- [en.wikipedia.org/wiki/Python_(programming_language)](https://en.wikipedia.org/wiki/Python_(programming_language))
-
-It actually has many `table` elements but only one is of interest and has `wikitable` on the class. So Table Sniffer will see the domain is Wikipedia and filter to only those tables.
-
-Then run the script against a URL. Make sure to quote your URL to escape characters.
+Run the tool.
 
 ```sh
-$ python -m table_sniffer.table_sniffer \
-    'https://en.wikipedia.org/wiki/Python_(programming_language)'
-```
-You'll see output logged for each CSV - `1.csv`, `2.csv`, etc.
-
-```
-Wrote CSV:
- - .../var/1.csv
- - 16 data rows
-
+$ python -m table_sniffer.table_sniffer 'https://example.com'
 ```
 
-Open your CSVs stored in the `var` directory.
-
-See a sample output CSV stored in the project:
-
-- [wiki-python.csv](/table_sniffer/var/sample/wiki-python.csv)
+Get CSVs written out to the project's `var` directory.
 
 
 ## Documentation
 
-See project [docs](/docs/).
+See the project [docs](/docs/).
 
 
 ## Future development
@@ -62,7 +43,7 @@ Perhaps I can use HTML `h` tags to name the table files rather than just by numb
 
 Maybe I can at least print out text from around the table of show the tables in a summarized text form structure of the page, for context. With the sentence or heading before/after the table.
 
-Maybe the ID, class etc. printed.
+Maybe the ID, class etc. printed. Or `caption`.
 
 
 ## License
