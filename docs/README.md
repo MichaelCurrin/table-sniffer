@@ -47,9 +47,9 @@ df = pd.read_html(url)
 df.to_csv('1.csv')
 ```
 
-Docs:
+More info:
 
-- [pd.read_html](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_html.html).   
+- Pandas docs - [pd.read_html](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_html.html).   
     > Read HTML tables into a list of DataFrame objects.
     >
     > ...
@@ -59,7 +59,7 @@ Docs:
     - Tutorials
         - [marsja.se](https://www.marsja.se/how-to-use-pandas-read_html-to-scrape-data-from-html-tables/)
         - [TowardsDataScience.com](https://towardsdatascience.com/scraping-tabular-data-with-pandas-python-10cf2a133cbf)
-- [pd.df.to_csv](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_csv.html)
+- Pandas docs - [pd.df.to_csv](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_csv.html)
 
 
 ## Future development
