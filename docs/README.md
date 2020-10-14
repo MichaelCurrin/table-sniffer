@@ -79,3 +79,9 @@ Perhaps I can use HTML `h` tags to name the table files rather than just by numb
 Maybe I can at least print out text from around the table of show the tables in a summarized text form structure of the page, for context. With the sentence or heading before/after the table.
 
 Maybe the ID, class etc. printed. Or `caption`.
+
+### Extract other elements
+
+Expand to more then just tables.
+
+e.g. Use CSS selector or flag on the command-line to extract or all text in the body of the page, or all links.
