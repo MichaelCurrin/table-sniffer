@@ -1,5 +1,4 @@
 {
-    "terminal.integrated.cwd": "table_sniffer",
     "code-runner.cwd": "table_sniffer",
 
     "python.pythonPath": "venv/bin/python",
