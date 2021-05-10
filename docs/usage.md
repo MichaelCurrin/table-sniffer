@@ -44,13 +44,12 @@ Wrote CSV:
 
 ```
 
-Open your CSVs stored in the `var` directory.
+Open your CSVs which are stored in the `var` directory.
 
-See a sample output CSV stored in the project.
 
-- [wiki-python.csv](/table_sniffer/var/sample/wiki-python.csv)
+## Sample
 
-For example, for this `table` on the page:
+Given this `table` element on the Python Wikipedia page:
 
 ```html
 <table class="wikitable">
@@ -84,3 +83,7 @@ You get a CSV like this:
 Type,Mutability,Description,Syntax examples
 Foo,Bar,Baz,...
 ```
+
+A sample CSV from that page is provided in this repo:
+
+- [wiki-python.csv](/table_sniffer/var/sample/wiki-python.csv)
