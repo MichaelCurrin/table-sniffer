@@ -1,8 +1,9 @@
 # Usage
 
-Activate your virtual environment.
+Activate your virtual environment before running commands here.
+
 ```sh
-$ cd <PATH_TO_REPO>
+$ cd PATH_TO_REPO
 $ source venv/bin/activate
 ```
 
