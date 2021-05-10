@@ -1,10 +1,10 @@
 default: install install-dev
 
+all: default pre-deploy
 
-# Show summary of make commands.
-help:
-	@echo 'Print lines that are not indented (targets and comments) or empty, plus any indented echo lines.'
-	@egrep '(^\S)|(^$$)|\s+@echo' Makefile
+
+h help:
+	@grep '^[a-z#]' Makefile
 
 
 # Install core dependencies.
@@ -15,6 +15,12 @@ install:
 # Install dev dependencies.
 install-dev:
 	pip install -r requirements-dev.txt
+
+upgrade:
+	pip install pip --upgrade
+	pip install -r requirements.txt --upgrade
+	pip install -r requirements-dev.txt --upgrade
+
 
 # Format with Black.
 format:
