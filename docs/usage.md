@@ -1,5 +1,6 @@
 # Usage
 
+Activate your virtual environment.
 ```sh
 $ cd <PATH_TO_REPO>
 $ source venv/bin/activate
@@ -7,11 +8,13 @@ $ source venv/bin/activate
 
 ## Run against default URL
 
+An easy test without having to supply URL. This will Wikipedia's Python page, as set in [constants.py](/table_sniffer/etc/constants.py).
+
 ```sh
 $ make run
 ```
 
-## Run against custom URL
+## Run against a custom URL
 
 ```sh
 $ python -m table_sniffer.table_sniffer MY_URL
@@ -53,7 +56,7 @@ For example, for this `table` on the page:
 <table class="wikitable">
     <caption>Summary of Python 3's built-in types
     </caption>
-    
+
     <tbody>
         <tr>
             <th>Type</th>

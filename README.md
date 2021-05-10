@@ -8,11 +8,12 @@
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
 
 [![Made with Python](https://img.shields.io/badge/Python->=3.6-blue?logo=python&logoColor=white)](https://python.org)
+[![dependency - requests-html](https://img.shields.io/badge/dependency-requests--html-blue)](https://pypi.org/project/requests-html)
 
 
-This simple Python app finds HTML tables on a given webpage and saves each as CSV files. I've tested it on Wikipedia.
+This simple Python app finds HTML tables on a given webpage and saves each one as a CSV file.
 
-The app only cares about getting data as plain text - it strips out any HTML styling, links etc.
+The app only cares about getting data in the form of plain text - it strips out any HTML styling and links.
 
 
 ## Sample usage
@@ -27,9 +28,10 @@ If any HTML `table` elements could be found on the page, you'll see log output t
 
 
 ## Documentation
+> How to set up and run the app locally
 
 <div align="center">
-  
+
 [![View - Documentation](https://img.shields.io/badge/View-Documentation-blue?style=for-the-badge)](/docs/)
 
 </div>
